@@ -18,21 +18,21 @@ export async function routes(
   });
 
   fastify.post(
-    '/customer',
+    '/customers',
     async (request: FastifyRequest, reply: FastifyReply) => {
       return new CreateCustomerController().handle(request, reply);
     }
   );
 
   fastify.get(
-    '/customer',
+    '/customers',
     async (request: FastifyRequest, reply: FastifyReply) => {
       return new ListCostumersController().handle(request, reply);
     }
   );
 
   fastify.delete(
-    '/customer',
+    '/customers',
     async (request: FastifyRequest, reply: FastifyReply) => {
       return new DeleteCustomerController().handle(request, reply);
     }
