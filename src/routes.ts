@@ -18,7 +18,7 @@ export async function routes(
   });
 
   fastify.post(
-    '/customers',
+    '/customer',
     async (request: FastifyRequest, reply: FastifyReply) => {
       return new CreateCustomerController().handle(request, reply);
     }
@@ -32,7 +32,7 @@ export async function routes(
   );
 
   fastify.delete(
-    '/customers',
+    '/customer',
     async (request: FastifyRequest, reply: FastifyReply) => {
       return new DeleteCustomerController().handle(request, reply);
     }
